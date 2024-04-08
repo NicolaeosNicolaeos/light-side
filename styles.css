@@ -1,0 +1,134 @@
+* {
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.universalspacing-h1h2h3h4h5h6 {
+    padding: 1.5rem 1rem 0rem;
+}
+
+.universalspacing-p {
+    padding: 1rem;
+}
+
+.navbar {
+    background-color: #7FB3D5;
+    background: linear-gradient(to top, rgba(127, 179, 213, 0), rgba(127, 179, 213, 1)0.3125rem);/*(to bottom, #7fb3d5 0%, #7fb3d5 90%, transparent 100%) This was the initial method used before identifying that using %s affects the rate of fade depending on the height of the section*/
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    z-index: 10
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    list-style-type: none;
+}
+
+.navbar a {
+    color:#fff;
+    text-decoration: none; /*removes underline from links*/
+    display: flex;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem 1rem;
+}
+
+.navbar a:hover {
+    background-color: #F9E79F;
+    color: black;
+    border-radius: 0.5rem; 
+}
+
+/*502px is the width that the text in text-box start to distort. Use this media query to adjust text size/positioning in text-box. Determined unneccessary for now*/
+@media (max-width: 502px) {
+    .navbar {
+
+    }
+}
+
+.intro {
+    background: url('images/helping-hand.jpg');
+    background-size: cover; /* background image covers entire div*/
+    background-position: center;
+    text-align: center;
+    padding: 3rem /*top*/ 2rem /*left and right*/ 3rem /*bottom*/;
+    margin-top: -1rem;
+    position: relative;
+    z-index: 9;
+}
+
+.text-box {
+    background-color: rgba(249, 231, 159, 0.8);
+    max-width: 60%;
+    margin: 0 auto;
+    padding: 1.5rem 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 0.3rem #F9E79F;
+}
+
+.text-box h1{
+    margin-bottom: 1rem;
+}
+
+.text-box p{
+    margin-bottom: 1.2rem;
+}
+
+.text-box a{
+    max-width: 7rem;
+    background-color: white;
+    color: #7FB3D5;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    margin: 0 auto;
+    border-radius: 0.5rem; 
+    display: block;
+    border: 0.125rem solid #7FB3D5;
+    box-shadow: 0 0 0.3rem #7fb3d5;
+}
+
+.text-box a:hover {
+    box-shadow: 0 0 0.3rem #7fb3d5,
+                0 0 0.6rem #7fb3d5,
+                0 0 0.9rem #7fb3d5;
+}
+
+/*0.3125rem (5px) is the ideal size of the faded section in the linear-gradient*/
+.about {
+    background-color: #7fb3d5;
+    background: linear-gradient(to bottom, rgba(127, 179, 213, 0), rgba(127, 179, 213, 1) 0.3125rem);
+    padding: 2.3125rem;
+    margin-top: -1rem;
+    position: relative;
+    z-index: 10;
+}
+
+.text-box-cult {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(249, 231, 159);
+    max-width: 60%;
+    margin: 0 auto;
+    padding: 1.5rem 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 0.3rem #F9E79F;
+}
+
+.faq {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 60%;
+    margin: 0 auto;
+
+}
+
